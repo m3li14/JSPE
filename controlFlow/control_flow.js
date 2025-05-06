@@ -49,3 +49,27 @@ let isAuthenticated = true;
 
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let enrolleStatus = true;
+let userLooged = "Enrolled Member"
+let enrollMessage;
+
+if (enrolleStatus) {
+	if (userLooged === "Employee") {
+		userMessage = `Welcome ${userLooged}, You are authorized to have access to (Dietary Services).`;
+	}
+	else if (userLooged === "Enrolled Member") {
+		userMessage = `Welcome ${userLooged}, You are authorized to have access to (Dietary Services) and one-on-one interaction with a dietician.`;
+	}
+	else if (userLooged === "Subscriber") {
+		userMessage = `Welcome ${userLooged}, You have partial access to facilitate (Dietary Services) only.`;
+	}
+	else {
+		userMessage = `Welcome ${userLooged}, You need to enroll or at least subscribe first to avail this facility.`;
+	}
+}
+console.log(userMessage);
+
+for (let i = 1; i <= 5; i++) {
+	console.log(i);
+}
