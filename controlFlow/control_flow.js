@@ -51,25 +51,43 @@ let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticate
 console.log("Authentication Status:", authenticationStatus);
 
 let enrolleStatus = true;
-let userLooged = "Enrolled Member"
-let enrollMessage;
+let userLooged = "Enrolled Member";
+let partOne = "Welcome";
+
+const dialog = document.querySelector("dialog");
+const dialogText = document.getElementById("dialogText");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
 
 if (enrolleStatus) {
 	if (userLooged === "Employee") {
-		userMessage = `Welcome ${userLooged}, You are authorized to have access to (Dietary Services).`;
-	}
-	else if (userLooged === "Enrolled Member") {
-		userMessage = `Welcome ${userLooged}, You are authorized to have access to (Dietary Services) and one-on-one interaction with a dietician.`;
-	}
-	else if (userLooged === "Subscriber") {
-		userMessage = `Welcome ${userLooged}, You have partial access to facilitate (Dietary Services) only.`;
-	}
-	else {
-		userMessage = `Welcome ${userLooged}, You need to enroll or at least subscribe first to avail this facility.`;
+		userMessage = `You are authorized to have access to (Dietary Services).`;
+	} else if (userLooged === "Enrolled Member") {
+		userMessage = `You are authorized to have access to (Dietary Services) and one-on-one interaction with a dietician.`;
+	} else if (userLooged === "Subscriber") {
+		userMessage = `You have partial access to facilitate (Dietary Services) only.`;
+	} else {
+		userMessage = `You need to enroll or at least subscribe first to avail this facility. You will be redirected.`;
+		// window.location.href = 'https://google.com/';
 	}
 }
-console.log(userMessage);
 
-for (let i = 1; i <= 5; i++) {
-	console.log(i);
+// Set the message inside the dialog
+dialogText.textContent = `${partOne} ${userLooged}, ${userMessage}`;
+
+// Show the dialog on button click
+showButton.addEventListener("click", () => {
+	dialog.showModal();
+});
+
+// Close the dialog on button click
+closeButton.addEventListener("click", () => {
+	dialog.close();
+});
+
+function greet(a, b) {
+	return a * b;
 }
+const result = greet(4, 4);
+console.log(result);
+
