@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Calculate the total amount of the purchased grocery item</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+	<h1>Calculate the total amount of the purchased grocery item</h1>
+
+	<div style="width: 800px;">
+		<p id="TotalCost"></p>
+		<div>
+			<label for="grocery1" style="font-weight: bold; padding-bottom: 1em;">Enter first grocery amount: </label>
+			<input type="number" id="grocery1" style="width: 100%">
+		</div>
+		<div>
+			<label for="grocery2" style="font-weight: bold; padding-bottom: 1em;">Enter second grocery amount: </label>
+			<input type="number" id="grocery2" style="width: 100%">
+		</div>
+		<div>
+			<label for="grocery3" style="font-weight: bold; padding-bottom: 1em;">Enter thierd grocery amount: </label>
+			<input type="number" id="grocery3" style="width: 100%">
+		</div>
+
+		<div style="margin-top: 1em;">
+			<button style="padding: 1em;" onclick="calculateItems()">Calculate Total Amount</button>
+		</div>
+	</div>
+</body>
+
+
+<script src="groceryTracker.js"></script>
+
+</html>

@@ -91,3 +91,11 @@ function greet(a, b) {
 const result = greet(4, 4);
 console.log(result);
 
+const arraynumbersorting = ["Apple", "Cherry", "Banana", "Kiwi", "Avocado"];
+// const arrayLength = arraynumbersorting.length;
+// arraynumbersorting.sort();
+// arraynumbersorting.sort((a, b) => a - b);
+
+const lastElement = arraynumbersorting.length - 1;
+
+console.log(arraynumbersorting[lastElement])
